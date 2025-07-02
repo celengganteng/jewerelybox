@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewelry Box Premium - Kotak Perhiasan Mewah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        
+        .premium-blue-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        
+        .promo-card {
+            background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+            box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3);
+        }
+        
+        .countdown-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .color-variant {
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .color-variant:hover, .color-variant.active {
+            border-color: #3b82f6;
+            transform: scale(1.05);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #3b82f6 0%, #1e3a8a 100%);
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .form-container {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-radius: 1rem;
+            overflow: hidden;
+        }
+        
+        .price-tag {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .price-tag::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #ef4444;
+            transform: rotate(-5deg);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Header -->
+    <header class="premium-blue-bg text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <i class="fas fa-gem text-2xl mr-2"></i>
+                    <h1 class="text-xl font-bold">LUXURY JEWELRY BOX</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <span class="flex items-center">
+                        <i class="fas fa-star text-yellow-300 mr-1"></i>
+                        <span>4.9/5 (1,234 Reviews)</span>
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-check-circle text-green-300 mr-1"></i>
+                        <span>100% Original</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Image -->
+        <section class="bg-white py-8">
+            <div class="container mx-auto px-4">
+                <img src="https://cdn.orderonline.id/uploads/images_3348171750619366564.jpg" alt="Premium Jewelry Box" class="w-full h-auto rounded-lg shadow-lg mx-auto">
+            </div>
+        </section>
+
+        <!-- Product Title & Description -->
+        <section class="bg-white py-8">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Jewelry Box Premium</h1>
+                    <p class="text-gray-600 mb-6">Tempat penyimpanan perhiasan mewah dengan desain elegan dan fungsional</p>
+                    
+                    <div class="bg-blue-50 rounded-lg p-4 mb-6">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                            <div class="flex items-center">
+                                <i class="fas fa-weight-hanging text-blue-500 mr-2"></i>
+                                <span>Berat: 117 gram</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-box-open text-blue-500 mr-2"></i>
+                                <span>Bahan: PU + fiber</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-ruler-combined text-blue-500 mr-2"></i>
+                                <span>Ukuran: 9,5 x 9,5 x 5cm</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Features -->
+        <section class="bg-gray-50 py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">Keunggulan Produk</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Tahan Air</h3>
+                        <p class="text-gray-600">Permukaan PU tahan air, tahan lama dan mudah dibersihkan.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Lembut & Nyaman</h3>
+                        <p class="text-gray-600">Lapisan serat lembut, indah, dan nyaman untuk disentuh tanpa menggores perhiasan.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-vector-square"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Desain Fungsional</h3>
+                        <p class="text-gray-600">Slot, lubang stud ear, dan kait kalung menjaga perhiasan tetap aman.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pengamanan</h3>
+                        <p class="text-gray-600">Penutupan ritsleting mudah digunakan, mengunci perhiasan dengan aman.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-sliders-h"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Pembagi Fleksibel</h3>
+                        <p class="text-gray-600">Pembagi removable yang dapat disesuaikan sesuai kebutuhan.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-suitcase"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Portabel</h3>
+                        <p class="text-gray-600">Ukuran portabel dengan bobot ringan yang mudah dibawa saat bepergian.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Details with Images -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">Detail Produk</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                    <div>
+                        <img src="https://cdn.orderonline.id/uploads/images_3348171750619366564.jpg" alt="Jewelry Box Detail" class="w-full h-auto rounded-lg shadow">
+                        <p class="text-center mt-4 text-gray-600">Desain elegan dengan penutup ritsleting premium</p>
+                    </div>
+                    <div>
+                        <img src="https://cdn.orderonline.id/uploads/images_7694541751475304630.jpg" alt="Jewelry Box Interior" class="w-full h-auto rounded-lg shadow">
+                        <p class="text-center mt-4 text-gray-600">Interior yang terorganisir dengan pembagi fleksibel</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Variants -->
+        <section class="bg-gray-50 py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">Pilihan Warna</h2>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                    <div class="color-variant rounded-lg overflow-hidden">
+                        <img src="https://cdn.orderonline.id/uploads/images_2873511750619366370.jpg" alt="Warna 1" class="w-full h-auto">
+                    </div>
+                    <div class="color-variant rounded-lg overflow-hidden">
+                        <img src="https://cdn.orderonline.id/uploads/images_2766641750619366452.jpg" alt="Warna 2" class="w-full h-auto">
+                    </div>
+                    <div class="color-variant rounded-lg overflow-hidden">
+                        <img src="https://cdn.orderonline.id/uploads/images_7010411750619365132.jpg" alt="Warna 3" class="w-full h-auto">
+                    </div>
+                    <div class="color-variant rounded-lg overflow-hidden">
+                        <img src="https://cdn.orderonline.id/uploads/images_6626781750619366460.jpg" alt="Warna 4" class="w-full h-auto">
+                    </div>
+                    <div class="color-variant rounded-lg overflow-hidden">
+                        <img src="https://cdn.orderonline.id/uploads/images_9975821750619366448.jpg" alt="Warna 5" class="w-full h-auto">
+                    </div>
+                    <div class="color-variant rounded-lg overflow-hidden">
+                        <img src="https://cdn.orderonline.id/uploads/images_9250131750619844300.jpg" alt="Warna 6" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-800 mb-12">Apa Kata Pelanggan Kami</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="testimonial-card bg-white p-6 rounded-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 font-bold mr-3">A</div>
+                            <div>
+                                <h4 class="font-semibold">Anita Wijaya</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Kotak perhiasannya sangat premium! Bahan PU-nya benar-benar tahan air dan mudah dibersihkan. Desainnya sangat fungsional dengan slot untuk semua jenis perhiasan saya. Pengiriman cepat dan packing rapi."</p>
+                    </div>
+                    
+                    <div class="testimonial-card bg-white p-6 rounded-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 font-bold mr-3">B</div>
+                            <div>
+                                <h4 class="font-semibold">Budi Santoso</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Saya beli ini untuk hadiah anniversary istri. Dia sangat suka! Ukurannya pas untuk dibawa traveling. Kualitas jahitan dan resletingnya premium banget. Worth it untuk harganya, apalagi dapat diskon."</p>
+                    </div>
+                    
+                    <div class="testimonial-card bg-white p-6 rounded-lg border border-gray-100">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 font-bold mr-3">D</div>
+                            <div>
+                                <h4 class="font-semibold">Dewi Lestari</h4>
+                                <div class="flex text-yellow-400 text-sm">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">"Sudah cari-cari jewelry box yang bagus dan akhirnya nemu ini. Interiornya lembut jadi tidak menggores perhiasan emas saya. Pembaginya bisa diatur sesuai kebutuhan. Sangat recomended untuk kolektor perhiasan!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Promo Countdown -->
+        <section class="premium-blue-bg py-12 text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6">PROMO SPESIAL HARI INI</h2>
+                    
+                    <div class="promo-card rounded-lg p-6 mb-8">
+                        <p class="text-lg md:text-xl font-semibold mb-4">Dapatkan Diskon Spesial Untuk Hari Ini Saja, Harga Akan Kembali Normal Setelah:</p>
+                        
+                        <div class="flex justify-center space-x-2 md:space-x-4 mb-6">
+                            <div class="countdown-box rounded-lg p-3 w-16 md:w-20">
+                                <div class="text-2xl md:text-3xl font-bold" id="countdown-hours">12</div>
+                                <div class="text-xs">Jam</div>
+                            </div>
+                            <div class="countdown-box rounded-lg p-3 w-16 md:w-20">
+                                <div class="text-2xl md:text-3xl font-bold" id="countdown-minutes">34</div>
+                                <div class="text-xs">Menit</div>
+                            </div>
+                            <div class="countdown-box rounded-lg p-3 w-16 md:w-20">
+                                <div class="text-2xl md:text-3xl font-bold" id="countdown-seconds">56</div>
+                                <div class="text-xs">Detik</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                            <div>
+                                <p class="text-sm">Harga Normal</p>
+                                <p class="price-tag text-xl line-through">Rp 255.000</p>
+                            </div>
+                            <div>
+                                <p class="text-sm">Harga Promo</p>
+                                <p class="text-3xl font-bold">Rp 155.000</p>
+                            </div>
+                            <div class="bg-white text-blue-600 px-4 py-2 rounded-full font-bold">
+                                <p>Anda Hemat Rp 100.000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Notes -->
+        <section class="bg-gray-50 py-8">
+            <div class="container mx-auto px-4">
+                <div class="max-w-3xl mx-auto">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-lg font-semibold mb-4 text-center">Catatan Penting</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                            <div class="flex flex-col items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-2">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <p class="text-sm">Pengiriman 2-4 Hari Setelah Pemesanan</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-2">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <p class="text-sm">Mohon Isi Alamat Dengan Lengkap</p>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-500 mb-2">
+                                    <i class="fas fa-certificate"></i>
+                                </div>
+                                <p class="text-sm">100% Product Original</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form -->
+        <section class="bg-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl mx-auto form-container">
+                    <div class="premium-blue-bg text-white py-4 px-6 text-center">
+                        <h2 class="text-xl md:text-2xl font-bold">FORM PEMESANAN</h2>
+                        <p class="text-sm opacity-90">Isi data dengan lengkap untuk proses pengiriman</p>
+                    </div>
+                    
+                    <div class="bg-white p-6">
+                        <!-- OrderOnline Embed Code - v8.0.4 -->
+                        <div class="ooef">
+                            <form class="orderonline-embed-form" data-username="vina" data-product-slug="jewelry-box" data-product-id="6858517e975bbece05083b4d" id="oo-embed-form-jewelry-box-6728" data-origin="orderonline">
+                                <div class="ooef-loader">
+                                    <style>
+                                        .ooef-loader{visibility: hidden;opacity: 0;position: absolute;left: 0;right: 0;top: 0;bottom: 0;display: flex;justify-content: center;align-items: center;flex-direction: column;animation: ooLoadingIn 10s ease;-webkit-animation: ooLoadingIn 10s ease;animation-fill-mode: forwards;overflow: hidden}
+                                        @keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                        @-webkit-keyframes ooLoadingIn{0%{visibility: hidden;opacity: 0}20%{visibility: visible;opacity: 0}100%{visibility: visible;opacity: 1}}
+                                        .ooef-loader>div,.ooef-loader>div:after{border-radius: 50%;width: 2.5rem;height: 2.5rem}
+                                        .ooef-loader>div{font-size: 10px;position: relative;text-indent: -9999em;border: .25rem solid #f5f5f5;border-left: .25rem solid #55c4cf;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: ooLoading 1.1s infinite linear;animation: ooLoading 1.1s infinite linear}
+                                        .ooef-loader.error>div{border-left: .25rem solid #ff4500;animation-duration: 5s}
+                                        @-webkit-keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                        @keyframes ooLoading{0%{-webkit-transform: rotate(0);transform: rotate(0)}100%{-webkit-transform: rotate(360deg);transform: rotate(360deg)}}
+                                    </style>
+                                    <div aria-live="polite" role="status">
+                                        <div>Loading...</div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <script>
+                            if (typeof xLogError != 'function') {
+                                var xLogError = function (error) {
+                                    var req = new XMLHttpRequest();
+                                    var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error.stack });
+                                    var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(payload) + '&type=embed&level=error';
+                                    req.open('POST', 'https://api.orderonline.id/log', true);
+                                    req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                                    req.send(params);
+                                };
+                            }
+                            try {
+                                if (typeof xEmbedScript != 'function') {
+                                    var xEmbedScript = function () {
+                                        !function(w, d, e, v, id, t, s) {
+                                            if (d.getElementById(id)) return;
+                                            t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                            s = d.getElementsByTagName(e)[0];
+                                            s.parentNode.insertBefore(t, s);
+                                        }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.4', 'oo-embed-js');
+                                    };
+                                }
+                                if (typeof xEmbedInit != 'function') {
+                                    var xEmbedInit = function (w, n) {
+                                        if (w.ooe) return;
+                                        n = w.ooe = function() {
+                                            n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                        };
+                                        if (!w._ooe) w._ooe = n;
+                                        n.push = n;n.loaded = !0;n.version = '8.0.4';n.queue = [];
+                                    };
+                                }
+                                xEmbedInit(window);
+                                ooe('setup', 'redirect', 'https://vina.orderonline.id');
+                                ooe('init', '5f17e00168e4c04c273e9925', '6858517e975bbece05083b4d', '6858517e975bbece05083b4e', 'oo-embed-form-jewelry-box-6728', {"mode":"page","action":"Klik untuk pemesanan","title":"Form Pemesanan","triggerPixel":true,"triggerGtm":false});
+                                if (!window.jQuery) {
+                                    !function(w, d, e, v, id, t, s) {
+                                        if (d.getElementById(id)) return;
+                                        t = d.createElement(e);t.async = !0;t.src = v;t.id = id;
+                                        t.addEventListener('load', xEmbedScript);
+                                        s = d.getElementsByTagName(e)[0];
+                                        s.parentNode.insertBefore(t, s);
+                                    }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js', 'oo-embed-jquery');
+                                } else {
+                                    xEmbedScript();
+                                }
+                            } catch (e) {
+                                xLogError(e);
+                                throw e;
+                            }
+                        </script>
+                        <!-- End OrderOnline Embed Code -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="premium-blue-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex justify-center mb-4">
+                    <i class="fas fa-gem text-2xl mr-2"></i>
+                    <h2 class="text-xl font-bold">LUXURY JEWELRY BOX</h2>
+                </div>
+                <p class="mb-4">Solusi penyimpanan perhiasan premium dengan kualitas terbaik</p>
+                <div class="flex justify-center space-x-4 mb-6">
+                    <a href="#" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                <p class="text-sm opacity-80">© 2025 Luxury Jewelry Box. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date();
+            const midnight = new Date();
+            midnight.setHours(24, 0, 0, 0);
+            
+            const diff = midnight - now;
+            
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Color Variant Selection
+        document.querySelectorAll('.color-variant').forEach(variant => {
+            variant.addEventListener('click', function() {
+                document.querySelectorAll('.color-variant').forEach(v => v.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
